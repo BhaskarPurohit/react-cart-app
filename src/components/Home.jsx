@@ -1,5 +1,6 @@
 import React from 'react'
 import "../styles/home.scss"
+import { toast } from 'react-hot-toast';
 
 
 const img1 =
@@ -27,6 +28,7 @@ const Home = () => {
 
    const addToCartHandler= (options)=>{
     console.log(options);
+    toast.success("Added to Cart")
    }
 
   return (
