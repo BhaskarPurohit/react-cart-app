@@ -13,13 +13,13 @@ const Home = () => {
         {
             name: "Mac Book",
             price:12000,
-            imgSrc: "asd",
+            imgSrc: img1,
             id: "hellobye",
         },
         {
             name: "iPhone",
             price:1560,
-            imgSrc: "qwerty",
+            imgSrc:img2,
             id: "newiphone",
         }
     ]
@@ -30,19 +30,19 @@ const Home = () => {
    }
 
   return (
-    <div className="home">Home
+    <div className="home">
     {
         productList.map((i)=>(
-            <ProductCart key={i.id} imgSrc={i.imgSrc} name={i.name}
+            <ProductCard key={i.id} imgSrc={i.imgSrc} name={i.name}
             price={i.price} id={i.id} handler={addToCartHandler}/>
         ))
     }
     </div>
   )
-}S
+}
 
-const ProductCart = ({name, id, price, handler, imgSrc})=>{
-    <div className="productCart">
+const ProductCard = ({name, id, price, handler, imgSrc})=>{
+    <div className="productCard">
         <img src={imgSrc} alt={name} />
         <p>{name}</p>
         <h4>${price}</h4>
